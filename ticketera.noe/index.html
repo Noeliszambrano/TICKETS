@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Compra de Tickets</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <button class="abrir-btn" onclick="mostrarPanel()">🎟️ Tickets</button>
+
+    <div id="panelTickets" class="panel oculto">
+    <h2>Concierto Bad Bunny</h2>
+    <p>📅 Fecha: 15 de Julio, 2025</p>
+    <p>⏰ Hora: 8:00 PM</p>
+    <p>📍 Lugar: Estadio Nacional</p>
+
+    <label for="cantidad">Cantidad de Tickets:</label>
+    <input type="number" id="cantidad" min="1" max="10" placeholder="Ingresa la cantidad">
+
+    <button onclick="comprar()">Comprar Ticket</button>
+
+    <p class="confirmation" id="confirmacion"></p>
+    <p class="total" id="totalPagar"></p>
+
+    <button class="cerrar-btn" onclick="ocultarPanel()">Cerrar</button>
+    </div>
+
+    <script>
+    const precioPorTicket = 50000; // en COP
+
+    function mostrarPanel() {
+        document.getElementById("panelTickets").classList.remove("oculto");
+    }
+
+    function ocultarPanel() {
+        document.getElementById("panelTickets").classList.add("oculto");
+        document.getElementById("confirmacion").innerText = "";
+        document.getElementById("totalPagar").innerText = "";
+        document.getElementById("cantidad").value = "";
+    }
+
+    function comprar() {
+        let Cantidad = parseInt(document.getElementById("cantidad").value);
+        if (isNaN(cantidad) || cantidad < 1) {
+        document.getElementById("confirmacion").innerText = "Por favor, ingresa una cantidad válida.";
+        document.getElementById("confirmacion").style.color = "red";
+        document.getElementById("totalPagar").innerText = "";
+        return;
+    }
+        let totaltickets = Cantidad * precioPorTicket;
+        let mensaje = 🎉 ¡Has comprado ${cantidad} ticket(s)!;
+        let totalMensaje = 💰 Total a pagar: ${total.toLocaleString("es-CO", { style: "currency", currency: "COP" })};
+
+        document.getElementById("confirmacion").innerText = mensaje;
+        document.getElementById("confirmacion").style.color = "#28a745";
+        document.getElementById("totalPagar").innerText = totalMensaje;
+    </script>
+
+</body>
+</html>

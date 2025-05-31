@@ -1,0 +1,96 @@
+/* Estilo general del cuerpo /
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 40px;
+    text-align: center;
+}
+
+/ Botón principal "Tickets" /
+.abrir-btn {
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.abrir-btn:hover {
+    background: #0056b3;
+}
+
+/ Panel de compra /
+.panel {
+    background: white;
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/ Ocultar panel /
+.oculto {
+    display: none;
+}
+
+/ Campo de entrada para cantidad /
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/ Botón de "Comprar Ticket" /
+.panel button:not(.cerrar-btn) {
+    background: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.panel button:not(.cerrar-btn):hover {
+    background: #218838;
+}
+
+/ Botón de cerrar /
+.cerrar-btn {
+    margin-top: 15px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cerrar-btn:hover {
+    background: #c82333;
+}
+
+/ Mensaje de confirmación /
+.confirmation {
+    margin-top: 10px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/ Total a pagar */
+.total {
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 18px;
+}
